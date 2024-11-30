@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Max-salary</title>
+    <link rel="stylesheet" href="{% static 'css/max_salary.css' %}">
+    <link rel="icon" href="https://cdn-res.keymedia.com/cms/images/ca/126/0422_638344521442095078.jpg">
+</head>
+<body>
+    <header>
+        <a href="/">Home</a>
+        <h1>Eng ko'p maosh oladigan hodimlar</h1>
+    </header>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>№</th>
+                <th>Name</th>
+                <th>Salary</th>
+                <th>Job</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for max in max_salary %}
+
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td><a href="{% url 'deps-list' employee_id=max.employee_id %}">{{max.first_name}}</a></td>
+                <td>{{max.salary}}</td>
+                <td>{{max.job.job_title}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

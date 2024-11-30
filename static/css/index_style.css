@@ -1,0 +1,30 @@
+* {
+    text-decoration-line: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: 90vh;
+    background-image: url("https://cdn-res.keymedia.com/cms/images/ca/126/0422_638344521442095078.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-origin: content-box;
+    position: relative;
+}
+.heading {
+    position: absolute;
+    top: 40%;
+    right: 10%;
+    color: teal;
+    font-family: "Segoe UI", system-ui, sans-serifserif;
+    font-weight: normal;
+    text-shadow: 0 0 5px rgb(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255);
+    padding: 10px 20px;
+    border-radius:10px;
+}
+

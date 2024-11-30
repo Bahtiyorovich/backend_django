@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h3>Event Registrations Form</h3>
+        </header>
+        <form>
+            <div class="form__container">
+                <p>Name</p>
+                <div class="form__container__inputs">
+                    <div class="input__section">
+                        <input type="text" name="firstname" class="input">
+                        <p>First Name</p>
+                    </div>
+                    <div class="input__section">
+                        <input type="text" name="lastname" class="input">
+                        <p>Last Name</p>
+                    </div>
+                </div>
+            </div>
+            <div class="textarea_email">
+                <p>Company</p>
+                <label>
+                    <textarea id="company" name="message"></textarea>
+                </label>
+            </div>
+            <div class="textarea_email">
+                <p>Email</p>
+                <label>
+                    <input id="email" type="email" name="email">
+                </label>
+            </div>
+            <div class="form__container">
+                <p>Phone</p>
+                <div class="form__container__inputs">
+                    <div class="input__section">
+                        <input type="text" name="firstname" class="input">
+                        <p>Area Code</p>
+                    </div>
+                    <div class="input__section">
+                        <input type="text" name="lastname" class="input">
+                        <p>Phone Number</p>
+                    </div>
+                </div>
+            </div>
+            <div class="form__section">
+                <label for="cars">Subject:</label>
+                <select id="cars" name="cars">
+                  <option value="volvo">Volvo</option>
+                  <option value="saab">Saab</option>
+                </select>
+            </div>
+            <div class="form__radio">
+                <p>Are you an existing customer?</p>
+                <section>
+                    <label>
+                        <input type="radio" name="option">
+                        <span>Yes</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="option">
+                        <span>No</span>
+                    </label>
+                </section>
+            </div>
+            <button type="button" class="button">REGISTER</button>
+        </form>
+    </div>
+</body>
+</html>
